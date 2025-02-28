@@ -2,6 +2,7 @@ FROM node:18 as builder
 
 WORKDIR /build
 
+RUN curl -O https://registry.npmmirror.com/js-tiktoken/-/js-tiktoken-1.0.12.tgz
 COPY web/package.json .
 COPY web/yarn.lock .
 
